@@ -1,0 +1,1 @@
+strig1\n string2\n string3 string4 string5 string6 string7 string8 string9 string10
