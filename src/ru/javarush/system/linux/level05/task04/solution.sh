@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install -y ufw
 
 # Включение брандмауэра
-sudo ufw enable
+sudo ufw --force enable
 
 # Разрешение трафика для SSH (порт 22)
 sudo ufw allow 22
@@ -15,6 +15,7 @@ sudo ufw allow 80
 
 # Запрет всех остальных подключений
 sudo ufw default deny incoming
+sudo ufw default allow outputting
 
 # Вывод текущих правил брандмауэра
 sudo ufw status verbose
