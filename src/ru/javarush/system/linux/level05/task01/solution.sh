@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Проверяем статус брандмауэра и выводим его состояние (включён или выключен)
-sudo systemctl status ufw
+sudo ufw status
