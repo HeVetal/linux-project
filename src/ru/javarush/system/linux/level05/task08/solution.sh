@@ -10,20 +10,19 @@ iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
 # Разрешение входящих соединений для порта SSH (22)
-sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 # Разрешение входящих соединений для порта HTTP (80)
-sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 # Разрешение входящих соединений для порта HTTPS (443)
-sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 # Разрешение входящих соединений от localhost (для корректной работы системы)
 sudo iptables -A INPUT -i lo -j ACCEPT
 
 # Разрешение входящих соединений для уже установленных соединений
 sudo iptables -A INPUT -m conntract --ctstate ESTABLISHED,RELATED -j ACCEPT
-sudo ufw default deny incoming
 
 # Вывод текущих правил iptables
 iptables -L -v
