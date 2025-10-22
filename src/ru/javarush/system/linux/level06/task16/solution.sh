@@ -8,14 +8,15 @@ UUID=$(blkid -o value -s UUID /dev/sdb1)
 sudo mkdir -p /mnt/usb-auto
 
 # 3. Отредактируйте файл /etc/fstab и добавьте строку (замените <ваш_UUID> и ext4 на свои значения)
-echo "UUID=<ваш_UUID> /mnt/usb-auto ext4 defaults 0 2" | sudo tee -a /etc/fstab
+#echo "UUID=<ваш_UUID> /mnt/usb-auto ext4 defaults 0 2" | sudo tee -a /etc/fstab
+echo "UUID=<$UUID> /mnt/usb-auto ext4 defaults 0 2" | sudo tee -a /etc/fstab
 
 # 4. Протестируйте настройки
-???
+sudo mount -a
 
 # 5. Проверьте содержимое точки монтирования
-???
+ls /mnt/usb-auto
 
 # 6. Перезагрузите систему и проверьте монтирование
-???
-???
+sudo reboot
+ls /mnt/usb-auto
