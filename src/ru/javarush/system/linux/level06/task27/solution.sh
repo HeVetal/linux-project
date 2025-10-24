@@ -4,10 +4,10 @@
 mkdir -p /mnt/testdisk
 
 # Монтируем диск /dev/sdb в точку монтирования /mnt/testdisk
-???
+sudo mount /dev/sdb /mnt/testdisk
 
 # Проверяем, что диск /dev/sdb смонтирован, с помощью команды df -h
-??? | grep "/mnt/testdisk"
+df -h | grep "/mnt/testdisk"
 
 # Определяем UUID диска /dev/sdb с помощью команды blkid
 UUID=$(blkid -s UUID -o value /dev/sdb)
@@ -24,7 +24,7 @@ cat /etc/fstab
 
 # Тестируем автоматическое монтирование (эмулируем перезапуск системы)
 umount /mnt/testdisk
-???
+sudo reboot #????
 
 # Проверяем, что диск снова смонтирован после команды mount -a
 df -h | grep "/mnt/testdisk"
