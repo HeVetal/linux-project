@@ -16,7 +16,7 @@ ls /mnt/testdisk/data
 mkdir -p /mnt/backup
 
 # Копируем содержимое /mnt/testdisk/data в /mnt/backup с помощью rsync
-rsync -???
+rsync -av /mnt/testdisk/data /mnt/backup
 
 # Проверяем содержимое директории /mnt/backup
 echo "Файлы в директории /mnt/backup после локального копирования:"
@@ -31,7 +31,7 @@ REMOTE_DIR="/remote_backup"
 ssh "${REMOTE_SERVER}" "mkdir -p ${REMOTE_DIR}"
 
 # Выполняем копирование с помощью rsync
-rsync ???
+rsync -av /mnt/testdisk/data user@$REMOTE_SERVER:$REMOTE_DIR
 
 # Проверяем содержимое директории /remote_backup на удалённой машине
 echo "Файлы в директории ${REMOTE_DIR} на сервере после удалённого копирования:"
