@@ -5,4 +5,4 @@
 # -z: включает сжатие данных при передаче
 # -v: отображает прогресс выполнения
 # --delete: удаляет на удалённой стороне файлы, которые больше не существуют на локальной стороне
-rsync -azv --delete ??? 
+rsync -azv --delete /var/www/html webadmin@backup.server.com:/var/www/backup
