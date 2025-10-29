@@ -22,13 +22,13 @@ server {
 EOF
 
 # 4. Активируйте конфигурацию с помощью символической ссылки
-???
+sudo ls -s /etc/nginx/sites-available/mytestsite.com /etc/nginx/sites-enabled/
 
 # 5. Проверьте конфигурацию на ошибки
-???
+sudo nginx -t
 
 # 6. Перезапустите сервер Nginx
-???
+sudo systemctl reload nginx
 
 # 7. Добавьте запись в /etc/hosts для тестирования
 echo "127.0.0.1 mytestsite.com" | sudo tee -a /etc/hosts
