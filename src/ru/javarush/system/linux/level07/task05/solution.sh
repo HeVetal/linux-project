@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo rm -f /etc/nginx/sites-enabled/mytestsite.com
 # Создание корневой директории для сайта
 sudo mkdir -p /var/www/mytestsite.com
 
@@ -21,10 +21,10 @@ server {
 EOF
 
 # Активация конфигурации виртуального хоста
-???
+sudo ln -s /etc/nginx/sites-available/mytestsite.com /etc/nginx/sites-enabled/
 
 # Проверка конфигурации Nginx на ошибки
-???
+sudo nginx -t
 
 # Перезапуск Nginx
-???
+sudo systemctl reload nginx
