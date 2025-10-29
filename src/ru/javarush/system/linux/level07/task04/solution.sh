@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Создание папки для сайта
-???
+sudo mkdir /var/www/my_apache_site
 
 # Создание HTML-файла index.html с содержимым
 echo "<h1>Welcome to My Apache Website!</h1>" | sudo tee /var/www/my_apache_site/index.html
@@ -33,7 +33,7 @@ sudo a2dissite 000-default.conf
 echo "127.0.0.1 my_apache_site.local" | sudo tee -a /etc/hosts 
 
 # Перезагрузка Apache для применения настроек
-???
+sudo systemctl restart apache2
 
 # Вывод сообщения об успешной настройке
 echo "Откройте http://my_apache_site.local в браузере, чтобы проверить сайт."
