@@ -5,7 +5,8 @@ sudo apt update
 sudo apt install -y apache2
 
 # Запустите Apache и проверьте его статус
-???
+sudo systemctl start apache2
+sudo systemctl status apache2
 
 
 # Откройте браузер и проверьте http://localhost
