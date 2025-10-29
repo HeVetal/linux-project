@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Создание папки для сайта
-???
+sudo mkdir -p /var/www/my_website
 
 # Создание HTML-файла с содержимым
 echo "<h1>Welcome to My Nginx Website!</h1>" | sudo tee /var/www/my_website/index.html
@@ -28,7 +28,7 @@ sudo ln -sf /etc/nginx/sites-available/my_website /etc/nginx/sites-enabled/
 echo "127.0.0.1 my_website.local" | sudo tee -a /etc/hosts
 
 # Перезапуск службы Nginx
-???
+sudo systemctl restart nginx
 
 # Вывод сообщения об успешной настройке
 echo "Откройте в браузере http://my_website.local для проверки."
