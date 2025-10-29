@@ -26,7 +26,7 @@ sudo bash -c 'cat > /etc/apache2/sites-available/othersite.com.conf << EOF
 EOF'
 
 # 4. Активация виртуального хоста
-???
+sudo a2ensite othersite.com.conf
 
 # 5. Перезапуск Apache сервера для применения изменений
-???
+sudo systemctl reload apache2
