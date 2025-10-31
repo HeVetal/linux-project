@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # 1. Создайте директорию для сайта
-???
+sudo mkdir -p /var/www/mywebsite
 
 # 2. Переместите файл index.html в эту директорию
-???
+sudo cp index.html /var/www/mywebsite
 
 # 3. Настройте веб-сервер Nginx
 sudo tee /etc/nginx/sites-available/mywebsite <<EOF
@@ -22,7 +22,7 @@ server {
 EOF
 
 # 4. Активируйте конфигурацию, создав символическую ссылку
-???
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 
 # 5. Проверьте конфигурацию на ошибки
 ???
