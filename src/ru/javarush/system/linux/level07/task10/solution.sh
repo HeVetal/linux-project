@@ -25,7 +25,7 @@ EOF
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 
 # 5. Проверьте конфигурацию на ошибки
-???
+sudo nginx -t
 
 # 6. Перезапустите сервер Nginx
 ???
