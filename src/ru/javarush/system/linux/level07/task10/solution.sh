@@ -28,7 +28,7 @@ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 sudo nginx -t
 
 # 6. Перезапустите сервер Nginx
-???
+sudo systemctl reload nginx
 
 # 7. Уведомление для проверки
 echo "Откройте в браузере http://localhost для проверки сайта."
