@@ -7,10 +7,10 @@ sudo apt-get upgrade -y
 # 2. Установите Certbot и соответствующий плагин для веб-сервера
 
 # Для Nginx
-???
+sudo apt-get install certbot python3-certbot-nginx
 
 # Для Apache
-???
+sudo apt-get install certbot python3-c
 
 # 3. Убедитесь, что Certbot установлен
-???
+certbot --version
