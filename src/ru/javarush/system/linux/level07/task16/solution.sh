@@ -11,8 +11,7 @@ server {
 EOF
 
 # Активируйте конфигурацию и перезапустите Nginx
-???
-???
+sudo systemctl restart nginx
 
 # Для Apache: настройка перенаправления HTTP → HTTPS
 sudo tee /etc/apache2/sites-available/redirect_http_to_https.conf <<EOF
@@ -24,5 +23,4 @@ sudo tee /etc/apache2/sites-available/redirect_http_to_https.conf <<EOF
 EOF
 
 # Активируйте конфигурацию и перезапустите Apache
-???
-???
+sudo systemctl restart apache2
