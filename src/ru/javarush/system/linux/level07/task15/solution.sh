@@ -2,8 +2,8 @@
 
 # Добавление задачи в Crontab:
 # Открываем Crontab от имени суперпользователя и добавляем строку для продления сертификатов.
-(sudo crontab -l 2>/dev/null; echo "???") | sudo crontab -
+(sudo crontab -l 2>/dev/null; echo "0 0 * * * certbot renew --quiet") | sudo crontab -
 
 # Проверка, что задача успешно добавлена в Crontab:
 # Если задача добавлена, она должна отобразиться в выводе.
-???
+crontab -l
