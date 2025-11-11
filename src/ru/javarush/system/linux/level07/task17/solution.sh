@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Отобразите список всех установленных Let's Encrypt сертификатов
-???
+sudo cerbot certificates
