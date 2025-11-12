@@ -10,7 +10,8 @@ sudo apt install -y nginx
 ???
 
 # 3. Установите Certbot и плагин для Nginx
-???
+sudo apt-get install cerbot python3-certbot-nginx
+sudo certbot --nginx
 
 # 4. Убедитесь, что Certbot установлен
-???
+sudo certbot --version
