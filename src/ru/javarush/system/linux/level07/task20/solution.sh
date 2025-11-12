@@ -5,7 +5,7 @@ sudo crontab -e
 
 # 2. Добавьте задачу для автоматического обновления сертификатов и перезагрузки Nginx
 # Эта строка настроит ежедневное обновление сертификатов в 00:00 с перезагрузкой Nginx
-(sudo crontab -l 2>/dev/null; echo "??? && ???") | sudo crontab -
+(sudo crontab -l 2>/dev/null; echo "0 0 * * * certbot renew --quiet && systemctl reload nginx") | sudo crontab -
 
 # 3. Проверьте, что задача добавлена в Cron
 sudo crontab -l
