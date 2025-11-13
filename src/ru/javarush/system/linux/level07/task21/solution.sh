@@ -5,9 +5,9 @@ sudo apt update
 sudo apt install -y nginx
 
 # 2. Проверьте, что сервер установлен и работает
-???
-???
-???
+sudo systemctl status nginx
+sudo systemctl is-active nginx
+curl -I http://localhost
 
 # 3. Установите Certbot и плагин для Nginx
 sudo apt-get install cerbot python3-certbot-nginx
