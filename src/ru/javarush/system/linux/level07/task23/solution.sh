@@ -31,19 +31,19 @@ server {
 EOF
 
 # 3. Активируйте оба виртуальных хоста
-sudo ln -s ???
-sudo ln -s ???
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/test.com /etc/nginx/sites-enabled/
 
 # 4. Проверьте конфигурацию Nginx
-???
+sudo nginx -t
 
 # 5. Перезапустите Nginx
-???
+sudo systemctl reload nginx
 
 # 6. Добавьте записи в /etc/hosts для тестирования
 echo "127.0.0.1 example.com" | sudo tee -a /etc/hosts
 echo "127.0.0.1 test.com" | sudo tee -a /etc/hosts
 
 # 7. Проверьте доступность виртуальных хостов
-curl -I ???
-curl -I ???
+curl -I http://example.com
+curl -I http://test.com
