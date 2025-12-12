@@ -24,7 +24,7 @@ cat /etc/fstab
 
 # Тестируем автоматическое монтирование (эмулируем перезапуск системы)
 umount /mnt/testdisk
-sudo reboot #????
+sudo mount -a
 
 # Проверяем, что диск снова смонтирован после команды mount -a
 df -h | grep "/mnt/testdisk"
